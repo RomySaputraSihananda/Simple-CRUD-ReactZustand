@@ -11,11 +11,17 @@ const App = () => {
     <div className="md:w-screen md:h-screen bg-gradient-to-r from-slate-900 to-slate-700 flex flex-col">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/update/:id" element={<Update />} />
-        <Route path="/detail/:id" element={<Detail />} />
-        <Route path="/*" element={404} />
+        <Route path="/Simple-CRUD-ReactZustand" element={<Home />} />
+        <Route path="/Simple-CRUD-ReactZustand/create" element={<Create />} />
+        <Route
+          path="/Simple-CRUD-ReactZustand/update/:id"
+          element={<Update />}
+        />
+        <Route
+          path="/Simple-CRUD-ReactZustand/detail/:id"
+          element={<Detail />}
+        />
+        <Route path="/Simple-CRUD-ReactZustand/*" element={404} />
       </Routes>
       <Footer />
     </div>
