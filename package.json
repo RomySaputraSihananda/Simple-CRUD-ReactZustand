@@ -2,7 +2,7 @@
   "homepage": "https://romysaputrasihananda.github.io/Simple-CRUD-ReactZustand",
   "name": "crud-react",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-flash-message": "^1.0.8",

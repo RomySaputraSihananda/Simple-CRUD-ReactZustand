@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowDown } from "./svg";
 import useAppStore from "../config/zustand";
 import styles from "../styles";
-import user from "./../assets/react.svg";
+import user from "./../assets/user.jpg";
 
 const kelamin = ["Laki-laki", "Perempuan", "Ikan"];
 const jurusan = ["TKJ", "TKR", "TBSM", "ATPH", "APHP", "BDP"];
