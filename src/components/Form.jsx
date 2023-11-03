@@ -82,12 +82,12 @@ const Form = ({ title, oldData }) => {
   };
   return (
     <div className="w-full max-w-lg flex relative">
-      <div className="w-[512px] h-[659px] border-t-[3px] border-r-[3px] border-whitePastel absolute -top-12 left-12 rounded-md hidden md:block"></div>
-      <div className="w-[512px] h-[659px] border-t-[3px] border-r-[3px] border-whitePastel absolute -top-6 left-6 rounded-md hidden md:block"></div>
+      <div className="backdrop-blur-md w-[512px] h-[659px] border-t-[3px] border-r-[3px] border-whitePastel absolute -top-12 left-12 rounded-md hidden md:block"></div>
+      <div className="backdrop-blur-lg w-[512px] h-[659px] border-t-[3px] border-r-[3px] border-whitePastel absolute -top-6 left-6 rounded-md hidden md:block"></div>
       <form
         action=""
         method="post"
-        className="w-full max-w-lg md:px-10 py-5 rounded-md md:border-[3px] md:border-whitePastel shadow-md z-10"
+        className="backdrop-blur-xl w-full max-w-lg md:px-10 py-5 rounded-md md:border-[3px] md:border-whitePastel shadow-md z-10"
         onSubmit={handleSubmit.bind(this)}
       >
         <h1 className="text-3xl font-semibold text-whitePastel mb-5 tracking-widest">

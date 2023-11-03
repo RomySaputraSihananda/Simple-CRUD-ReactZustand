@@ -6,6 +6,9 @@ const useAppStore = createWithEqualityFn((set) => ({
   data: [
     {
       id: 1,
+      media: {
+        github: "https://github.com/romysaputrasihananda",
+      },
       name: "Romy Saputra Sihananda",
       jenisKelamin: "Laki-laki",
       jurusan: "TKJ",

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ::-webkit-scrollbar {
-  width: 0px;
-} */
+body {
+  background-image: url("/bg.png");
+  background-size: cover;
+}

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="flex py-3 md:justify-around justify-between text-whitePastel">
+    <footer className="flex py-3 justify-center md:text-lg backdrop-blur-md text-sm text-whitePastel border-t border-whitePastel">
       <p>
         Copyright © 2023{" "}
         <Link
