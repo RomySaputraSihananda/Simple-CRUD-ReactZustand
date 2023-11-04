@@ -30,9 +30,9 @@ const Table = () => {
   return (
     <div className="w-full flex-1 grid place-items-center py-20">
       <div className="h-[70vh] xl:w-[50%] md:w-[80%] relative">
-        <div className="backdrop-blur-md h-full w-full border-r-[3px] border-t-[3px] absolute -top-12 -right-12 rounded-md hidden md:block"></div>
-        <div className="backdrop-blur-lg h-full w-full border-r-[3px] border-t-[3px] absolute -top-6 -right-6 rounded-md hidden md:block"></div>
-        <div className="backdrop-blur-xl flex absolute flex-col overflow-y-auto bg-transparent h-full w-full p-5 text-whitePastel rounded-md md:border-[3px] md:border-whitePastel shadow-md">
+        <div className="backdrop-blur-md h-full w-full border-r-[2px] border-t-[2px] absolute -top-12 -right-12 rounded-md hidden md:block"></div>
+        <div className="backdrop-blur-lg h-full w-full border-r-[2px] border-t-[2px] absolute -top-6 -right-6 rounded-md hidden md:block"></div>
+        <div className="backdrop-blur-xl flex absolute flex-col overflow-y-auto bg-transparent h-full w-full p-5 text-whitePastel rounded-md md:border-[2px] md:border-whitePastel shadow-md">
           {/* {message && <FlashMsg message={message} />} */}
           <h1 className="text-3xl font-semibold text-whitePastel mb-5 tracking-widest sticky top-0">
             Data Siswa

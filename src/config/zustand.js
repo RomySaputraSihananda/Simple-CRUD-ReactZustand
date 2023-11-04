@@ -8,6 +8,8 @@ const useAppStore = createWithEqualityFn((set) => ({
       id: 1,
       media: {
         github: "https://github.com/romysaputrasihananda",
+        twitter: "https://twitter.com/RomySihananda",
+        email: "mailto:romysaputrasihanandaa@gmail.com",
       },
       name: "Romy Saputra Sihananda",
       jenisKelamin: "Laki-laki",

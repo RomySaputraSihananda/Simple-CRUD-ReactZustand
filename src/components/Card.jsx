@@ -1,35 +1,40 @@
 import { Link } from "react-router-dom";
+import { Gender } from "./svg";
 
 const Card = ({ detail }) => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
-      <div className="w-[50%] xl:w-[30%] h-[50%] relative">
-        <div className="backdrop-blur-md  w-full h-full border-r-[3px] border-t-[3px] absolute -top-12 -right-12 rounded-md hidden md:block"></div>
-        <div className="backdrop-blur-lg w-full h-full border-r-[3px] border-t-[3px] absolute -top-6 -right-6 rounded-md hidden md:block"></div>
-        <div className="backdrop-blur-xl w-full h-full flex flex-col justify-center sm:px-1 overflow-y-auto bg-transparent  p-6 text-whitePastel rounded-md md:border-[3px] md:border-whitePastel shadow-md absolute">
-          <img
-            src={detail.foto}
-            alt=""
-            className="w-32 h-32 mx-auto rounded-full aspect-square"
-          />
-          <div className="space-y-4 text-center divide-y divide-whitePastel p-5">
-            <div className="my-2 space-y-1">
-              <h2 className="text-xl font-semibold sm:text-xl">
+      <div className="w-[70%] xl:w-[30%] h-[50%] relative">
+        <div className="backdrop-blur-md  w-full h-full border-r-[2px] border-t-[2px] absolute -top-12 -right-12 rounded-md hidden md:block"></div>
+        <div className="backdrop-blur-lg w-full h-full border-r-[2px] border-t-[2px] absolute -top-6 -right-6 rounded-md hidden md:block"></div>
+        <div className="flex flex-col backdrop-blur-xl w-full h-full sm:px-1 overflow-y-auto bg-transparent text-whitePastel rounded-md md:border-[2px] md:border-whitePastel shadow-md absolute">
+          <div className="flex flex-col items-center">
+            <img
+              src={detail.foto}
+              alt=""
+              className="mt-5 w-32 h-32 border-2 border-whitePastel mx-auto rounded-full aspect-square"
+            />
+            <div className="flex pt-6">
+              <h2 className="text-xl font-semibold sm:text-xl pr-3">
                 {detail.name}
               </h2>
-              <p className="px-5 text-xs sm:text-base">Full-stack developer</p>
+              <Gender gender={detail.jenisKelamin} />
+            </div>
+          </div>
+          <div className="px-2 flex-1 flex flex-col only:space-y-4 text-center divide-y divide-whitePastel">
+            <div className="flex-1 my-2 space-y-1 grid place-items-center">
+              <p className="text-xs sm:text-base">{detail.katakata}</p>
             </div>
             {detail.media && (
-              <div className="flex justify-evenly pt-2 space-x-4 align-center">
+              <div className="w-full flex justify-evenly p-5 space-x-4 align-center">
                 <Link
-                  rel="noopener noreferrer"
                   to={detail.media.github}
                   target="blank"
                   aria-label="GitHub"
                   className="p-2 rounded-m"
                 >
                   <svg
-                    viewBox="0 0 496 512"
+                    viewBox="0 0 512 512"
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-4 h-4 fill-current"
                   >
@@ -37,8 +42,7 @@ const Card = ({ detail }) => {
                   </svg>
                 </Link>
                 <Link
-                  rel="noopener noreferrer"
-                  to="https://twitter.com/RomySihananda"
+                  to={detail.media.twitter}
                   target="blank"
                   aria-label="Twitter"
                   className="p-2 rounded-m"
@@ -52,8 +56,7 @@ const Card = ({ detail }) => {
                   </svg>
                 </Link>
                 <Link
-                  rel="noopener noreferrer"
-                  to="mailto:romysaputrasihanandaa@gmail.com"
+                  to={detail.media.email}
                   aria-label="Email"
                   className="p-2 rounded-m"
                 >

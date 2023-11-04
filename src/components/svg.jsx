@@ -57,4 +57,31 @@ const ArrowDown = () => {
   );
 };
 
-export { Delete, Detail, Edit, ArrowDown };
+const Gender = ({ gender }) => {
+  if (gender === "Laki-laki") {
+    return (
+      <svg
+        className="stroke-current fill-none h-4 w-4"
+        strokeWidth={2}
+        viewBox="0 0 20 20"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" />
+        <path d="M15 14 A5 5 0 0 1 10 19 A5 5 0 0 1 5 14 A5 5 0 0 1 15 14 z" />
+        <path d="M19 5l-5.4 5.4M19 5h-5M19 5v5" />
+      </svg>
+    );
+  }
+  return (
+    <svg
+      className="stroke-current fill-none h-4 w-4"
+      strokeWidth={2}
+      viewBox="0 0 20 20"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <path d="M17 9 A5 5 0 0 1 12 14 A5 5 0 0 1 7 9 A5 5 0 0 1 17 9 z" />
+      <path d="M12 14v7M9 18h6" />
+    </svg>
+  );
+};
+
+export { Delete, Detail, Edit, ArrowDown, Gender };
