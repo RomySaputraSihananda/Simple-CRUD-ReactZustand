@@ -22,7 +22,6 @@ const Table = () => {
     setData(newData);
     return setMessage(`data ${name} berhasil dihapus`);
   };
-  console.log(message);
   const deletedAll = () => {
     setData([]);
   };

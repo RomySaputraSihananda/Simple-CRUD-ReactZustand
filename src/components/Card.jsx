@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Gender } from "./svg";
+import { Gender, Jurusan } from "./svg";
 
 const Card = ({ detail }) => {
   return (
@@ -8,25 +8,29 @@ const Card = ({ detail }) => {
         <div className="backdrop-blur-md  w-full h-full border-r-[2px] border-t-[2px] absolute -top-12 -right-12 rounded-md hidden md:block"></div>
         <div className="backdrop-blur-lg w-full h-full border-r-[2px] border-t-[2px] absolute -top-6 -right-6 rounded-md hidden md:block"></div>
         <div className="flex flex-col backdrop-blur-xl w-full h-full sm:px-1 overflow-y-auto bg-transparent text-whitePastel rounded-md md:border-[2px] md:border-whitePastel shadow-md absolute">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center pt-3">
             <img
               src={detail.foto}
               alt=""
               className="mt-5 w-32 h-32 border-2 border-whitePastel mx-auto rounded-full aspect-square"
             />
-            <div className="flex pt-6">
+            <div className="flex flex-col pt-6 text-center">
               <h2 className="text-xl font-semibold sm:text-xl pr-3">
                 {detail.name}
               </h2>
-              <Gender gender={detail.jenisKelamin} />
+              <div className="flex font-light pt-2 justify-center items-center">
+                <p className="px-2">{detail.tanggalLahir}</p>
+                <Jurusan type={detail.jurusan} />
+                <Gender gender={detail.jenisKelamin} />
+              </div>
             </div>
           </div>
           <div className="px-2 flex-1 flex flex-col only:space-y-4 text-center divide-y divide-whitePastel">
-            <div className="flex-1 my-2 space-y-1 grid place-items-center">
-              <p className="text-xs sm:text-base">{detail.katakata}</p>
+            <div className="flex-1 space-y-1 grid place-items-center px-2">
+              <p className="text-xs md:text-base">{detail.katakata}</p>
             </div>
             {detail.media && (
-              <div className="w-full flex justify-evenly p-5 space-x-4 align-center">
+              <div className="w-full flex justify-evenly p-4 space-x-4 align-center">
                 <Link
                   to={detail.media.github}
                   target="blank"

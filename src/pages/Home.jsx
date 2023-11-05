@@ -12,8 +12,8 @@ const Home = () => {
   return (
     <div
       className={`grid place-items-center w-full h-full transition-transform ${
-        show ? "transform translate-y-0" : "transform -translate-y-full"
-      } duration-300 ease-in-out`}
+        show ? "transform translate-x-0" : "transform -translate-x-full"
+      } duration-500 ease-out`}
     >
       <Table />
     </div>

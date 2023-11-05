@@ -13,7 +13,7 @@ const useAppStore = createWithEqualityFn((set) => ({
       },
       name: "Romy Saputra Sihananda",
       jenisKelamin: "Laki-laki",
-      jurusan: "TKJ",
+      jurusan: "Developer",
       tanggalLahir: "2005-12-22",
       agama: "Islam",
       foto: me,

@@ -9,24 +9,26 @@ const Update = () => {
   const data = useAppStore((state) => state.data);
 
   const [update, setupdate] = useState({});
+  const [show, setShow] = useState(false);
 
   document.title = "romys | Update Data";
 
   useEffect(() => {
     const [detail] = data.filter((e) => e.id == id);
     setupdate(detail);
+    setShow(true);
   }, []);
 
   return (
-    <>
-      {!update ? (
-        <NotFound />
-      ) : (
-        <div className="flex-1 grid place-items-center">
-          <Form title="UPDATE DATA" oldData={update} />
-        </div>
-      )}
-    </>
+    <div
+      className={`flex-1 grid place-items-center ${
+        show
+          ? "transform translate-x-0 transition"
+          : "transform -translate-x-full transition"
+      } duration-500 ease-out`}
+    >
+      {!update ? <NotFound /> : <Form title="UPDATE DATA" oldData={update} />}
+    </div>
   );
 };
 

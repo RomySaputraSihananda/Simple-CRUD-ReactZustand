@@ -9,15 +9,17 @@ import user from "./../assets/user.jpg";
 const kelamin = ["Laki-laki", "Perempuan", "Ikan"];
 const jurusan = ["TKJ", "TKR", "TBSM", "ATPH", "APHP", "BDP"];
 const agama = ["Islam", "Kristen", "Katolik", "Hindu", "Buddha", "Konghucu"];
-const template = {
-  id: Date.now(),
-  name: "",
-  jenisKelamin: "",
-  jurusan: "",
-  tanggalLahir: "",
-  agama: "",
-  foto: user,
-  katakata: "",
+const template = () => {
+  return {
+    id: Date.now(),
+    name: "",
+    jenisKelamin: "",
+    jurusan: "",
+    tanggalLahir: "",
+    agama: "",
+    foto: user,
+    katakata: "",
+  };
 };
 const Form = ({ title, oldData }) => {
   const [data, addData, setData] = useAppStore(
@@ -25,7 +27,7 @@ const Form = ({ title, oldData }) => {
     shallow
   );
 
-  const [fields, setFields] = useState(oldData || template);
+  const [fields, setFields] = useState(oldData || template());
 
   const navigate = useNavigate();
 
@@ -44,6 +46,7 @@ const Form = ({ title, oldData }) => {
     e.preventDefault();
     if (oldData) return handleUpdate(data, oldData);
     addData(fields);
+    console.log(fields);
     return navigate("/");
   };
 
